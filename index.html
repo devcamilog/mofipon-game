@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOFIPON!</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>        
+    <section id="seleccion-personaje">
+            <h1 class="titulo">MOFIPON</h1>
+    
+            <h2 class="subtitulo">Elige tu personaje:</h2>
+
+            <div  id='contenedorTarjetas' class="tarjetas">
+
+            </div>
+    
+           <button id="boton-seleccionar">Seleccionar</button>
+        </section>
+
+        <section id="ver-mapa">
+            <h2 class="subtitulo">Recorre el mapa con tu Mofipon</h2>
+            <canvas id="mapa"></canvas>
+            <div>
+                <button ontouchend="detenerMovimiento()"
+                    onmouseup="detenerMovimiento()"
+                    onmousedown="moverArriba()"
+                    ontouchstart="moverArriba()"
+                >⬆️</button>
+
+                <button 
+                    ontouchend="detenerMovimiento()" 
+                    onmouseup="detenerMovimiento()" 
+                    onmousedown="moverDerecha()"
+                    ontouchstart="moverDerecha()"
+                >➡️</button>
+
+                <button
+                    ontouchend="detenerMovimiento()" 
+                    onmouseup="detenerMovimiento()" 
+                    onmousedown="moverAbajo()"
+                    ontouchstart="moverAbajo()"
+                >⬇️</button>
+
+                <button 
+                    ontouchend="detenerMovimiento()" 
+                    onmouseup="detenerMovimiento()" 
+                    onmousedown="moverIzquierda()"
+                    ontouchstart="moverIzquierda()"
+                >⬅️</button>
+
+            </div>
+        </section>
+    
+        <section id="seleccionar-ataque">
+            <h1 class="titulo">MOFIPON</h1>
+            
+            <h2 class="subtitulo">Elige tu ataque:</h2>
+
+            <div id='contenedorAtaques' class="tarjetas-ataque">
+
+            </div>
+       
+                <div id="mensajes">  
+                    <p id="resultado">Mucha Suerte</p>
+
+                    <section id="reiniciar">
+                        <button id="boton-reiniciar">Reiniciar</button>
+                    </section>
+                </div>
+
+                <div class="ataques">
+                <div class="ataques-jugador">
+                    <p id="vidas-jugador">0</p> 
+                    <p id="personaje-jugador"></p>
+                    <div id="ataques-del-jugador"></div>
+                </div>
+                <div class="ataques-enemigo">
+                    <p id="vidas-enemigo">0</p> 
+                    <p id="personaje-enemigo"></p>
+                    <div id="ataques-del-enemigo"></div>
+                </div>
+            </div>   
+    </section>  
+    <script src="js/codigo.js"></script> 
+</body>
+</html>

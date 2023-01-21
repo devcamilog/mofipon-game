@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+body {
+    font-family: 'Silkscreen', cursive;
+    background: url(../assets/fondo-body.jpg);
+    background-size: cover;
+    
+}
+
+#seleccion-personaje {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo {
+    font-size: 60px;
+    border-radius: 20px;
+    color: #FFF7E9;
+    background: #780650;
+ 
+}
+
+.subtitulo{
+    color: white;
+}
+
+.tarjetas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center; 
+    column-gap: 15px;
+    row-gap: 15px;
+}
+
+.tarjetas-ataque {
+    display: flex;
+    gap: 10px;
+
+}
+.tarjeta-mofipon {
+    width: 220px;
+    height: 130px;
+    background: #59CE8F;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.tarjeta-mofipon:hover {
+    cursor: pointer;
+}
+
+.tarjeta-mofipon img {
+    width: 80px;
+}
+
+#boton-seleccionar {
+    font-family: 'Silkscreen', cursive;
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid black;
+    color: black;
+    background: #FFC23C;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+#seleccionar-ataque {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    display: none;
+}  
+
+input:checked + label {
+    background-color: #7A4495;
+}
+
+.boton-ataque {
+    background-color: #2192FF;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 100px;
+    border-color: transparent;
+    cursor: pointer;
+    color: white;
+    font-family: 'Silkscreen', cursive;
+
+}
+
+#mensajes {
+    width: 280px;
+    background: whitesmoke;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#boton-reiniciar {
+    color:  whitesmoke;
+    background: red;
+    font-family: 'Silkscreen', cursive;
+    
+}
+.ataques {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    gap: 100px;
+    justify-content: center;
+    color: white;
+
+}
+
+#vidas-jugador {
+    font-size: 50px;
+    color: green
+}
+
+#vidas-enemigo {
+    font-size: 50px;
+    color: red;
+}
+
+.ataques-jugador, .ataques-enemigo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#ver-mapa {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#ver-mapa button {
+    font-family: 'Silkscreen', cursive;
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid black;
+    color: black;
+    background: #FFC23C;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+@media (max-width: 560px) {
+    .tarjetas, .tarjetas-ataque{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 300px) {
+    #ver-mapa  div{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+}
+
